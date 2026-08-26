@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNISERA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/events.css">
+    <style>
+        nav {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            background: #BD2E2E;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: white;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #FF3617,
+                0 0 20px #FF5517,
+                0 0 35px #FF5517;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 34px;
+            height: 28px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 4px;
+            background: white;
+            border-radius: 20px;
+            transition: 0.35s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(11px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-11px);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                height: 70px;
+                padding: 0 20px;
+            }
+
+            .logo {
+                gap: 9px;
+                font-size: 22px;
+                letter-spacing: 1px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 240px;
+                height: calc(100vh - 70px);
+                background: linear-gradient(
+                    180deg,
+                    #BD2E2E 0%,
+                    #8A2117 100%
+                );
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                gap: 28px;
+                transition: right 0.35s ease;
+                box-shadow: -10px 0 25px rgba(0, 0, 0, 0.35);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu a {
+                width: 80%;
+                padding: 12px;
+                border-radius: 12px;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .nav-menu a:hover {
+                background: rgba(255, 255, 255, 0.12);
+                text-shadow: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                height: 65px;
+                padding: 0 15px;
+            }
+
+            .logo {
+                gap: 7px;
+                font-size: 18px;
+            }
+
+            .logo img {
+                width: 36px;
+                height: 36px;
+            }
+
+            .nav-menu {
+                top: 65px;
+                height: calc(100vh - 65px);
+            }
+        }
+
+        @media (max-width: 360px) {
+            .logo {
+                font-size: 16px;
+            }
+
+            .logo img {
+                width: 32px;
+                height: 32px;
+            }
+
+            nav {
+                padding: 0 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/Logo Magang.png" alt="Logo Magang">
+            Kelompok 5
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="index.html#event">EVENTS</a>
+            <a href="about_us.html">ABOUT US</a>
+        </div>
+    </nav>
+    <section class="competition-section">
+        <h2 class="competition-title">Competitions</h2>
+        <div class="competition-grid">
+            <a href="reverse_charades.html" class="competition-item">
+                <img src="assets/Reverse_charades.jpg" alt="Reverse Charades">
+                <div class="competition-overlay">
+                    <span>Reverse Charades</span>
+                </div>
+            </a>
+            <a href="sarung_tangkis.html" class="competition-item">
+                <img src="assets/sarung_tangkis.jpg" alt="Sarung Tangkis">
+                <div class="competition-overlay">
+                    <span>Sarung Tangkis</span>
+                </div>
+            </a>
+            <a href="speed_number.html" class="competition-item">
+                <img src="assets/speed_number.jpg" alt="Speed Number">
+                <div class="competition-overlay">
+                    <span>Speed Number</span>
+                </div>
+            </a>
+            <a href="four_domains.html" class="competition-item">
+                <img src="assets/four_domain.jpg" alt="Four Domains">
+                <div class="competition-overlay">
+                    <span>Four Domains</span>
+                </div>
+            </a>
+            <a href="tiup_gelas.html" class="competition-item">
+                <img src="assets/cup_racing.jpg" alt="Tiup Gelas">
+                <div class="competition-overlay">
+                    <span>Tiup Gelas</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="sosmed">
+        <div class="sosmed-card identity">
+
+            <img src="assets/Logo Magang.png" alt="Logo Magang">
+
+            <h2>Kelompok 5</h2>
+
+            <p>
+                Website Magang OSIS 26/27 
+                Kelompok 5 
+                SMA Ignatius Global School
+                Periode 2026 / 2027
+            </p>
+
+        </div>
+
+        <div class="sosmed-card location">
+
+            <i class="fa-solid fa-location-dot location-icon"></i>
+
+            <p>
+                Jl. Mayor Ruslan No. 118, 20 Ilir I,<br>
+                Kec. Ilir Timur I, Palembang
+            </p>
+
+        </div>
+
+        <div class="sosmed-card social-links">
+            <a href="https://www.instagram.com/osis.smaigs/" class="social-item">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@osis.smaigs" class="social-item">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>Tiktok</span>
+            </a>
+        </div>
+
+    </section>
+    <script src="js/registrasi/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About US | Magang OSIS SMA IGS</title>
+    <link rel="stylesheet" href="css/about_us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        nav {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            background: #BD2E2E;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: white;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #FF3617,
+                0 0 20px #FF5517,
+                0 0 35px #FF5517;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 34px;
+            height: 28px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 4px;
+            background: white;
+            border-radius: 20px;
+            transition: 0.35s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(11px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-11px);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                height: 70px;
+                padding: 0 20px;
+            }
+
+            .logo {
+                gap: 9px;
+                font-size: 22px;
+                letter-spacing: 1px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 240px;
+                height: calc(100vh - 70px);
+                background: linear-gradient(
+                    180deg,
+                    #BD2E2E 0%,
+                    #8A2117 100%
+                );
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                gap: 28px;
+                transition: right 0.35s ease;
+                box-shadow: -10px 0 25px rgba(0, 0, 0, 0.35);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu a {
+                width: 80%;
+                padding: 12px;
+                border-radius: 12px;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .nav-menu a:hover {
+                background: rgba(255, 255, 255, 0.12);
+                text-shadow: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                height: 65px;
+                padding: 0 15px;
+            }
+
+            .logo {
+                gap: 7px;
+                font-size: 18px;
+            }
+
+            .logo img {
+                width: 36px;
+                height: 36px;
+            }
+
+            .nav-menu {
+                top: 65px;
+                height: calc(100vh - 65px);
+            }
+        }
+
+        @media (max-width: 360px) {
+            .logo {
+                font-size: 16px;
+            }
+
+            .logo img {
+                width: 32px;
+                height: 32px;
+            }
+
+            nav {
+                padding: 0 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/Logo Magang.png" alt="Logo Magang">
+            Kelompok 5
+        </div>
+
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="index.html#event" id="event-link">EVENTS</a>
+            <a href="about_us.html">ABOUT US</a>
+        </div>
+    </nav>
+
+    <div class="sub-navbar">
+        <a href="#ketua">KETUA TIM</a>
+        <a href="#proposal">PROPOSAL</a>
+        <a href="#rundown">RUNDOWN & ANGGARAN</a>
+        <a href="#multimedia">WEBSITE & MULTIMEDIA</a>
+        <a href="#illustrasi">DESAIN ILLUSTRASI</a>
+        <a href="#dekorasi">DESAIN DEKORASI</a>
+        <a href="#lomba">LOMBA, MINI GAMES, & FUN ACTIVITIES</a>
+        <a href="#performance">PERFORMANCE</a>
+        <a href="#publikasi">PUBLIKASI</a>
+    </div>
+
+    <section class="division" id="ketua">
+        <div class="main-container">
+            <h1>KETUA TIM</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Nadine.jpg" alt="">
+                    </div>
+                    <h2>Nadine Cheryl</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>KETUA TIM</span>
+                        <a href="https://www.instagram.com/nadine.and.you/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="division" id="proposal">
+        <div class="main-container">
+            <h1>PROPOSAL</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Felicia.jpg" alt="">
+                    </div>
+                    <h2>Felicia Angeline</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>PROPOSAL</span>
+                        <a href="https://www.instagram.com/feliciangeline._">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Ayesha.jpg" alt="">
+                    </div>
+                    <h2>Ayesha Nafeeza Al-Adiva</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>PROPOSAL</span>
+                        <a href="https://www.instagram.com/yeshaaayy.a">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Nyimas.jpg" alt="">
+                    </div>
+                    <h2>Nyimas Haura Labibah</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>PROPOSAL</span>
+                        <a href="https://www.instagram.com/hauraaln_">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="division" id="rundown">
+        <div class="main-container">
+            <h1>RUNDOWN & ANGGARAN</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/DELYNE.jpg" alt="">
+                    </div>
+                    <h2>Delyne Patricia Sulistio</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>RUNDOWN & ANGGARAN</span>
+                        <a href="https://www.instagram.com/delyne_p_s">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/CHAVIA.jpg" alt="">
+                    </div>
+                    <h2>Chavia Lively Tjoayadi</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>RUNDOWN & ANGGARAN</span>
+                        <a href="https://www.instagram.com/chavvlt._">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Dhani.jpg" alt="">
+                    </div>
+                    <h2>Rahmad Ardhani Arbaa</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>RUNDOWN & ANGGARAN</span>
+                        <a href="https://www.instagram.com/Rahmad_Arbaa">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="division" id="multimedia">
+        <div class="main-container">
+            <h1>WEBSITE & MULTIMEDIA</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Darren Marcello Susanto_Website.jpeg" alt="">
+                    </div>
+                    <h2>Darren Marcello Susanto</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>WEBSITE & MULTIMEDIA</span>
+                        <a href="https://www.instagram.com/darrenms1003/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Kenzo Lionel Hendry_Website.jpeg" alt="">
+                    </div>
+                    <h2>Kenzo Lionel Hendry</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>WEBSITE & MULTIMEDIA</span>
+                        <a href="https://www.instagram.com/kenzo_lionel_hendry">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="division" id="illustrasi">
+        <div class="main-container">
+            <h1>DESIGN ILLUSTRASI</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/DISHA.jpg" alt="">
+                    </div>
+                    <h2>Disha Syafira</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>DESIGN ILLUSTRASI</span>
+                        <a href="https://www.instagram.com/fishn_dish">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </section>
+
+    <section class="division" id="dekorasi">
+        <div class="main-container">
+            <h1>DESAIN DEKORASI</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Vivian_Ane_Wijaya.jpg" alt="">
+                    </div>
+                    <h2>Vivian Ane Wijaya</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>DESAIN DEKORASI</span>
+                        <a href="https://www.instagram.com/vivianwijayaa_">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/syarafana.jpg" alt="">
+                    </div>
+                    <h2>Syarafana Aziza</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>DESAIN DEKORASI</span>
+                        <a href="https://www.instagram.com/syrfnnaa_">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Devina.jpg" alt="">
+                    </div>
+                    <h2>Devina Aurelia Theng Situmorang</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>DESAIN DEKORASI</span>
+                        <a href="https://www.instagram.com/devina.aureliaa">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="division" id="lomba">
+        <div class="main-container">
+            <h1>LOMBA, MINI GAMES, & FUN ACTIVITIES</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/AMALIA.jpg" alt="">
+                    </div>
+                    <h2>Amalika Risvi Afrizal</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>LOMBA, MINI GAMES, DLL.</span>
+                        <a href="https://www.instagram.com/am4lika">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Christine Nathalie.jpg" alt="">
+                    </div>
+                    <h2>Christine Nathalie</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>LOMBA, MINI GAMES, DLL.</span>
+                        <a href="https://www.instagram.com/chrntadh">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="division" id="performance">
+        <div class="main-container">
+            <h1>PERFORMANCE</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/kareycia.jpg" alt="">
+                    </div>
+                    <h2>Kareycia Melvina Huang</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>PERFORMANCE</span>
+                        <a href="https://www.instagram.com/m4tchloopsy">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/RADITH.jpg" alt="">
+                    </div>
+                    <h2>Radithya Emeraldin Astro</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>PERFORMANCE</span>
+                        <a href="https://www.instagram.com/dith_aastro">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="division" id="publikasi">
+        <div class="main-container">
+            <h1>PUBLIKASI</h1>
+
+            <div class="member-container">
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/Zivanna.jpg" alt="">
+                    </div>
+                    <h2>Zivanna Calysta Queeneta</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>PUBLIKASI</span>
+                        <a href="https://www.instagram.com/zivannacq">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="assets/RISYA.jpeg" alt="">
+                    </div>
+                    <h2>Risya Nahmi Aurelia</h2>
+                    <div class="member-line"></div>
+                    <div class="member-info">
+                        <span>PUBLIKASI</span>
+                        <a href="https://www.instagram.com/risyarlia">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="sosmed">
+        <div class="sosmed-card identity">
+
+            <img src="assets/Logo Magang.png" alt="Logo Magang">
+
+            <h2>Kelompok 5</h2>
+
+            <p>
+                Website Magang OSIS 26/27 
+                Kelompok 5 
+                SMA Ignatius Global School
+                Periode 2026 / 2027
+            </p>
+
+        </div>
+
+        <div class="sosmed-card location">
+
+            <i class="fa-solid fa-location-dot location-icon"></i>
+
+            <p>
+                Jl. Mayor Ruslan No. 118, 20 Ilir I,<br>
+                Kec. Ilir Timur I, Palembang
+            </p>
+
+        </div>
+
+        <div class="sosmed-card social-links">
+            <a href="https://www.instagram.com/osis.smaigs/" class="social-item">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@osis.smaigs" class="social-item">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>Tiktok</span>
+            </a>
+        </div>
+
+    </section>
+
+    <script src="js/registrasi/script.js"></script>
+</body>
+</html>
